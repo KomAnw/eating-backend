@@ -1,5 +1,7 @@
 export class CreateUserDto {
-  readonly login: string;
   readonly email: string;
+  readonly name: string;
   readonly password: string;
 }
+
+export default CreateUserDto;

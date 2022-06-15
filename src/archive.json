@@ -1,0 +1,12 @@
+{
+  "user": {
+    "errors": {
+      "emailAlreadyExist": "User with that email already exists",
+      "loginAlreadyExist": "User with that login already exists",
+      "loginOrPasswordIsNotValid": "Login or password is not correct"
+    }
+  },
+  "commonErrors": {
+    "baseError": "Something went wrong"
+  }
+}
