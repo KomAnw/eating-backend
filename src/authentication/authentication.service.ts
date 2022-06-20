@@ -44,6 +44,7 @@ export class AuthenticationService {
     try {
       const { email, password } = signInUserDto;
       const user = await this.userService.findByEmail(email);
+
       const userPassword =
         user && (await validatePassword(password, user.password));
 

@@ -8,13 +8,13 @@ import { JwtAuthenticationGuard } from './jwt-authentication.guard';
 export class AuthenticationController {
   constructor(private authService: AuthenticationService) {}
 
-  @Get('/onlyauth')
+  @Get('onlyauth')
   @UseGuards(JwtAuthenticationGuard)
   async hiddenInformation() {
     return 'hidden information';
   }
 
-  @Get('/anyone')
+  @Get('anyone')
   async publicInformation() {
     return 'this can be seen by anyone';
   }
