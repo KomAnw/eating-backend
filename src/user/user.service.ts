@@ -4,7 +4,6 @@ import { Model } from 'mongoose';
 import { User, UserDocument } from 'src/schemas/user.schema';
 import { sanitizeUser } from 'src/utils/sanitizeUser';
 import { SignUpUserDto } from './dto/signUp-user.dto';
-import Archive from 'src/archive.json';
 
 @Injectable()
 export class UserService {
