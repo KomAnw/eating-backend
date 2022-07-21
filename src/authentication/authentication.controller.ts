@@ -38,7 +38,6 @@ export class AuthenticationController {
     @Res({ passthrough: true }) res: Response,
   ) {
     const user = await this.authenticationService.registration(signUpUserDto);
-    console.log(user);
     const { login, email } = user;
     const cookie = await this.authenticationService.getCookieWithJwtToken(
       email,
