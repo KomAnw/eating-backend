@@ -47,9 +47,9 @@ export class AuthenticationService {
 
   public async login(signInUserDto: SignInUserDto) {
     try {
-      const { email, login, password } = signInUserDto;
-      const userByEmail = await this.userService.findByEmail(email);
-      const userByLogin = await this.userService.findByLogin(login);
+      const { loginOrEmail, password } = signInUserDto;
+      const userByEmail = await this.userService.findByEmail(loginOrEmail);
+      const userByLogin = await this.userService.findByLogin(loginOrEmail);
       const user = userByEmail || userByLogin;
 
       const userPassword =

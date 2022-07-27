@@ -1,5 +1,4 @@
 export class SignInUserDto {
-  readonly login?: string;
-  readonly email?: string;
+  readonly loginOrEmail?: string;
   readonly password: string;
 }
