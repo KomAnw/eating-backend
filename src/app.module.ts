@@ -1,10 +1,16 @@
-import { Module } from "@nestjs/common";
-import { MongooseModule } from "@nestjs/mongoose";
-import { UsersModule } from "./users/users.module";
-import { ConfigModule } from "@nestjs/config";
+import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
+import { UserModule } from './user/user.module';
+import { AuthenticationModule } from './authentication/authentication.module';
+import { OrderModule } from './order/order.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), MongooseModule.forRoot(process.env.MONGO_URI), UsersModule],
+  imports: [
+    MongooseModule.forRoot(process.env.MONGO_URI),
+    UserModule,
+    AuthenticationModule,
+    OrderModule,
+  ],
   controllers: [],
   providers: [],
 })

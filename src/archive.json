@@ -1,0 +1,13 @@
+{
+  "user": {
+    "errors": {
+      "emailAlreadyExist": "Пользователь с таким email уже существует.",
+      "loginAlreadyExist": "Этот логин занят другим пользователем.",
+      "loginOrPasswordIsNotValid": "Вы ввели некорректные данные.",
+      "passwordsNotCompare": "Пароли не совпадают"
+    }
+  },
+  "commonErrors": {
+    "baseError": "Something went wrong"
+  }
+}
